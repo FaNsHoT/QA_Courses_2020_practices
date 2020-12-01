@@ -19,7 +19,7 @@ The goal of the problem is to write an automated test to check for an error if t
 
 
 ## Task completion
-To complete the task, a program was written in the Java programming language, in an integrated development environment
+To complete the task, a program was written in the Java programming language, using the selenium library, in an integrated development environment
 Intellij IDEA software.
 Three classes were created for implementation:
   + googleTest - general program functionality
