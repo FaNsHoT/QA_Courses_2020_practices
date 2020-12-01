@@ -35,6 +35,19 @@ public class googleTest {
     @DisplayName("Открытие страницы с калькулятором")
     public void test1() {
         searchPage.search("калькулятор");
+        searchPage.openBr();
+        searchPage.clickOne();
+        searchPage.clickSum();
+        searchPage.clickTwo();
+        searchPage.closeBr();
+        searchPage.clickMul();
+        searchPage.clickThree();
+        searchPage.clickSub();
+        searchPage.clickFour();
+        searchPage.clickZero();
+        searchPage.clickDiv();
+        searchPage.clickFive();
+        searchPage.clickResult();
       //  assertEquals(9, searchPage.results.size());
     }
 
