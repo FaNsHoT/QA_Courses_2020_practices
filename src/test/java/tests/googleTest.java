@@ -1,17 +1,20 @@
 package tests;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import pages.SearchPage;
+import pages.calcButtons;
 
 public class googleTest {
 
     private static  WebDriver driver;
     private static SearchPage searchPage;
-
-
+    private calcButtons clickButtons;
 
     @BeforeAll
     public static void init() {
@@ -27,6 +30,7 @@ public class googleTest {
         driver.get("http://google.com");
     }
 
+    //Блок открыи страницы "калькулятор"
     @Test
     @DisplayName("Открытие страницы с калькулятором")
     public void test1() {
@@ -35,8 +39,9 @@ public class googleTest {
     }
 
 
+    /*
     @AfterAll
     public  static void teardown() {
         driver.quit();
-    }
+    } */
 }
