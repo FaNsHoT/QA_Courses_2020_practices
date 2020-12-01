@@ -17,7 +17,8 @@ public class googleTest {
 
     private static  WebDriver driver;
     private static SearchPage searchPage;
-    private calcButtons clickButtons;
+    private static calcButtons clickButtons ;
+
 
     @BeforeAll
     public static void init() {
@@ -26,6 +27,7 @@ public class googleTest {
         options.addArguments("start-maximized");
         driver = new ChromeDriver(options);
         searchPage = new SearchPage(driver);
+        clickButtons = new calcButtons(driver);
     }
 
     @BeforeEach
@@ -36,24 +38,22 @@ public class googleTest {
     @Test
     @DisplayName("Практическое задание №1")
     public void test1() {
+
         searchPage.search("калькулятор");
 
-      //  clickButtons.openbr();
-
-
-        searchPage.openBr();
-        searchPage.clickOne();
-        searchPage.clickSum();
-        searchPage.clickTwo();
-        searchPage.closeBr();
-        searchPage.clickMul();
-        searchPage.clickThree();
-        searchPage.clickSub();
-        searchPage.clickFour();
-        searchPage.clickZero();
-        searchPage.clickDiv();
-        searchPage.clickFive();
-        searchPage.clickResult();
+        clickButtons.OpenBr();
+        clickButtons.ClickOne();
+        clickButtons.ClickSum();
+        clickButtons.ClickTwo();
+        clickButtons.CloseBr();
+        clickButtons.ClickMul();
+        clickButtons.ClickThree();
+        clickButtons.ClickSub();
+        clickButtons.ClickFour();
+        clickButtons.ClickZero();
+        clickButtons.ClickDiv();
+        clickButtons.ClickFive();
+        clickButtons.ClickResult();
 
         assertEquals("1",driver.findElement(By.cssSelector("span[jsname='VssY5c']")).getText());
     }
@@ -62,11 +62,20 @@ public class googleTest {
     @DisplayName("Практическое задание №2")
     public void test2() {
         searchPage.search("калькулятор");
-        searchPage.clickSix();
-        searchPage.clickDiv();
-        searchPage.clickZero();
-        searchPage.clickResult();
+        clickButtons.ClickSix();
+        clickButtons.ClickDiv();
+        clickButtons.ClickZero();
+        clickButtons.ClickResult();
         assertEquals("Infinity",driver.findElement(By.cssSelector("span[jsname='VssY5c']")).getText());
+    }
+
+    @Test
+    @DisplayName("Практическое задание №2")
+    public void test3() {
+        searchPage.search("калькулятор");
+//сюда кнопку синуса
+        clickButtons.ClickResult();
+        assertEquals("Error",driver.findElement(By.cssSelector("span[jsname='VssY5c']")).getText());
     }
 
     /*
