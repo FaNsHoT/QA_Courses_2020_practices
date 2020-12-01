@@ -2,28 +2,27 @@
 ------------
 Version 1.0.0
 
-## Практические задания
+## Practical tasks
 
-Данные задания являются частью курсов QA от компании Simbirsoft
-Задачи предназначены для ознакомления с автоматизацией тестирования написание программы для тестирования 
-калькулятора Google
+These assignments are part of the QA courses from Simbirsoft
+Tasks are intended to introduce you to test automation writing a program for testing
+Google calculator
 
-### Задние №1
-Целью задачи является написание автоматизированного теста для проверки операций с целыми числами
+### Task №1
+The goal of the problem is to write an automated test for checking integer operations.
 
-### Задние №2
-Целью задачи является написание автоматизированного теста для проверки операции "деление на 0"
+### Task №2
+The goal of the problem is to write an automated test to test the "division by 0" operation
 
-### Задние №3
-Целью задачи является написание автоматизированного теста для проверки ошибки, при отсутствии значения
+### Task №3
+The goal of the problem is to write an automated test to check for an error if there is no value
 
 
-## Выполнение задания
-
-Для выполнения задания была написана программа на языке программирования Java, в интегрированной среде разработки
-программного обеспечения Intellij IDEA. 
-Для реализации было создано три класса: 
-  + googleTest - общий функционал программы
-  + SearchPage - открытия и поиска слова на странице поисковика Google 
-  + calcButtons - нажатие кнопок калькулятора
+## Task completion
+To complete the task, a program was written in the Java programming language, in an integrated development environment
+Intellij IDEA software.
+Three classes were created for implementation:
+  + googleTest - general program functionality
+  + SearchPage - opening and searching for a word on the google search page 
+  + calcButtons - pressing the calculator buttons
   
