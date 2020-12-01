@@ -84,9 +84,6 @@ public class SearchPage {
     @FindBy(css = "div[jsname = 'XoxYJ']")
     private WebElement nine;
 
-    //Проверка резултата подсчёта
-    @FindBy(css = "#cwos.qv3Wpe")
-    private WebElement number;
 
     //нажать на кнопку "открытая круглая скобка"
     public void openBr() {
