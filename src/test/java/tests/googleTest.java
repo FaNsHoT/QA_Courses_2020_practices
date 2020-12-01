@@ -56,10 +56,18 @@ public class googleTest {
         searchPage.clickResult();
 
         assertEquals("1",driver.findElement(By.cssSelector("span[jsname='VssY5c']")).getText());
-
-
     }
 
+    @Test
+    @DisplayName("Практическое задание №2")
+    public void test2() {
+        searchPage.search("калькулятор");
+        searchPage.clickSix();
+        searchPage.clickDiv();
+        searchPage.clickZero();
+        searchPage.clickResult();
+        assertEquals("Infinity",driver.findElement(By.cssSelector("span[jsname='VssY5c']")).getText());
+    }
 
     /*
     @AfterAll
