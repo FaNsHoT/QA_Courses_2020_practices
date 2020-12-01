@@ -1,11 +1,17 @@
 package tests;
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import pages.SearchPage;
 import pages.calcButtons;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class googleTest {
 
@@ -27,11 +33,14 @@ public class googleTest {
         driver.get("http://google.com");
     }
 
-    //Блок открыи страницы "калькулятор"
     @Test
     @DisplayName("Практическое задание №1")
     public void test1() {
         searchPage.search("калькулятор");
+
+      //  clickButtons.openbr();
+
+
         searchPage.openBr();
         searchPage.clickOne();
         searchPage.clickSum();
@@ -44,11 +53,19 @@ public class googleTest {
         searchPage.clickZero();
         searchPage.clickDiv();
         searchPage.clickFive();
+        searchPage.clickResult();
+
+        assertEquals("1",driver.findElement(By.cssSelector("span[jsname='VssY5c']")).getText());
+
 
     }
 
+
+    /*
     @AfterAll
     public  static void teardown() {
         driver.quit();
     }
+
+     */
 }
