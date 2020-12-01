@@ -73,7 +73,7 @@ public class googleTest {
     @DisplayName("Практическое задание №2")
     public void test3() {
         searchPage.search("калькулятор");
-//сюда кнопку синуса
+        clickButtons.ClickSin();
         clickButtons.ClickResult();
         assertEquals("Error",driver.findElement(By.cssSelector("span[jsname='VssY5c']")).getText());
     }

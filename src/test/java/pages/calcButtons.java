@@ -75,6 +75,15 @@ public class calcButtons {
     @FindBy(css = "div[jsname = 'XoxYJ']")
     public WebElement nine;
 
+    //кнопка "синус"
+    @FindBy(css = "div[jsname = 'aN1RFf']")
+    public WebElement sin;
+
+
+    //нажать на кнопку "синус"
+    public void ClickSin() {
+        sin.click();
+    }
 
     //нажать на кнопку "открытая круглая скобка"
     public void OpenBr() {
