@@ -29,7 +29,7 @@ public class googleTest {
 
     //Блок открыи страницы "калькулятор"
     @Test
-    @DisplayName("Рпактическое задание №1")
+    @DisplayName("Практическое задание №1")
     public void test1() {
         searchPage.search("калькулятор");
         searchPage.openBr();
@@ -44,7 +44,6 @@ public class googleTest {
         searchPage.clickZero();
         searchPage.clickDiv();
         searchPage.clickFive();
-        searchPage.clickResult();
 
     }
 
